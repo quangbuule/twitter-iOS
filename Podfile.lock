@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (3.1.3)
+  - AlamofireImage (2.1.1):
+    - Alamofire (~> 3.1)
+  - Dollar (4.0.1)
+  - OAuthSwift (0.4.8)
+  - RxBlocking (2.0.0-beta.3):
+    - RxSwift (~> 2.0.0-beta)
+  - RxCocoa (2.0.0-beta.3):
+    - RxSwift (~> 2.0.0-beta)
+  - RxSwift (2.0.0-beta.3)
+  - SwiftMoment (0.2.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.1.2)
+  - AlamofireImage (~> 2.0)
+  - Dollar (~> 4.0.1)
+  - OAuthSwift (from `git@github.com:quangbuule/OAuthSwift.git`, branch `master`)
+  - RxBlocking (~> 2.0.0-beta)
+  - RxCocoa (~> 2.0.0-beta)
+  - RxSwift (~> 2.0.0-beta)
+  - SwiftMoment (from `git@github.com:akosma/SwiftMoment.git`)
+
+EXTERNAL SOURCES:
+  OAuthSwift:
+    :branch: master
+    :git: git@github.com:quangbuule/OAuthSwift.git
+  SwiftMoment:
+    :git: git@github.com:akosma/SwiftMoment.git
+
+CHECKOUT OPTIONS:
+  OAuthSwift:
+    :commit: 2d610319ee01399d683152b7103fcbe09be77705
+    :git: git@github.com:quangbuule/OAuthSwift.git
+  SwiftMoment:
+    :commit: 19ab920430a1d5820bbda9a02912aa5d959cbcb7
+    :git: git@github.com:akosma/SwiftMoment.git
+
+SPEC CHECKSUMS:
+  Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
+  AlamofireImage: 31f7c4e9f516183e0ef2d2da18318de28a4628b8
+  Dollar: a058e2659e0d3261307c12630dbc2fd8e32f80bf
+  OAuthSwift: 23bd4807a4fd9e54ef6e7c2b5875138819186d9a
+  RxBlocking: 331f8bdedf77198f8ff1a37f09c492f1f4f631e5
+  RxCocoa: 1472006304b296d03c847f78b21384523cc4902e
+  RxSwift: 19fbe885b404d1d36d42ac8535134739a9b42952
+  SwiftMoment: 5125a0a94b89d068e939428d64beadb71a068402
+
+COCOAPODS: 0.39.0
