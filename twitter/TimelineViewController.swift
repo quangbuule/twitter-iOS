@@ -30,7 +30,7 @@ class TimelineViewController: UIViewController {
 
     activityIndicator.startAnimating()
     title = "Home"
-    Store.sharedInstance.Tweet(collectionId: TweetState.homeCollectionId)
+    Store.sharedInstance.dispatch(loadTweetsWithCollectionId: TweetState.homeCollectionId)
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -57,6 +57,7 @@ class TimelineViewController: UIViewController {
     
     if (shouldViewUpdate(nextTweets)) {
       tweets = nextTweets
+      print(tweets.count)
       activityIndicator.hidden = !(Tweet.isTweetsFetching(cid) && Tweet.isTweetsLoaded(cid))
       refreshControl.endRefreshing()
       
@@ -75,7 +76,7 @@ class TimelineViewController: UIViewController {
   
   func refresh(sender: AnyObject) {
     refreshControl.beginRefreshing()
-    Store.sharedInstance.Tweet(collectionId: TweetState.homeCollectionId)
+    Store.sharedInstance.dispatch(loadTweetsWithCollectionId: TweetState.homeCollectionId)
   }
 }
 
@@ -92,7 +93,7 @@ extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, Tw
     tweetCell.tweet = tweets[indexPath.row]
     tweetCell.delegate = self
     if indexPath.row >= tweets.count - 10 {
-      Store.sharedInstance.Tweet(collectionId: TweetState.homeCollectionId, more: true)
+      Store.sharedInstance.dispatch(loadTweetsWithCollectionId: TweetState.homeCollectionId, more: true)
     }
     
     return tweetCell

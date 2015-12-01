@@ -95,8 +95,11 @@ struct TweetState {
   }
   
   private var entities: [String: TweetState.Entity] = [:]
-  var collections: [String: TweetState.Collection] = [:]
+  private var collections: [String: TweetState.Collection] = [:]
   
+  /**
+   * Syntactic sugar functions
+   */
   func tweet(id: String) -> TweetState.Entity {
     return entities[id]!
   }
@@ -117,19 +120,22 @@ struct TweetState {
 // MARK: - Actions
 extension Store {
   
-  func Tweet(collectionId cid: String, more: Bool = false) -> Disposable {
-    var collection: TweetState.Collection
+  func dispatch(loadTweetsWithCollectionId cid: String, more: Bool = false) -> Disposable {
+    var collection = state.Tweet.collections[cid] ?? TweetState.Collection(id: cid)
     var parameters: [String: AnyObject] = [:]
     
+    
     if (!more) {
-      collection = TweetState.Collection(id: cid)
-      
+      /**
+       * Loading the collection for the first time or refreshing it
+       */
       collection.fetching = true
       collection.loaded = false
       
     } else {
-      collection = state.Tweet.collections[cid]!
-      
+      /**
+      * Loading more entities of the collection
+      */
       if (collection.fetching) {
         return NopDisposable.instance
       }
@@ -138,6 +144,10 @@ extension Store {
       parameters["since_id"] = collection.ids.last
     }
     
+    /**
+     * Update store's state, so the ViewController will react by showing
+     * loading indicator
+     */
     state.Tweet.collections[collection.id] = collection
     
     return TwitterClient.sharedInstance.get("/statuses/home_timeline.json", parameters: parameters)
@@ -164,6 +174,10 @@ extension Store {
         }
         
         Tweet.collections[cid] = collection
+        
+        /**
+         * Update store's state when we fetched tweets successfully
+         */
         self.state.Tweet = Tweet
     }
     
