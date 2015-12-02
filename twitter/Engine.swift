@@ -45,4 +45,8 @@ class Store {
       observer?.on(.Next(nextState))
     }
   }
+  
+  func dispatch(actionType: ActionTypes, payload: Dictionary<String, AnyObject?>) {
+    
+  }
 }

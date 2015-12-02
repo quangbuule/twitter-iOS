@@ -120,7 +120,7 @@ struct TweetState {
 // MARK: - Actions
 extension Store {
   
-  func dispatch(loadTweetsWithCollectionId cid: String, more: Bool = false) -> Disposable {
+  func loadTweets(collectionId cid: String, more: Bool = false) -> Disposable {
     var collection = state.Tweet.collections[cid] ?? TweetState.Collection(id: cid)
     var parameters: [String: AnyObject] = [:]
     

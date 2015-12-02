@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58560F481C0E80B8002CBAB8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560F471C0E80B8002CBAB8 /* Colors.swift */; };
+		58560F4A1C0E8110002CBAB8 /* ActionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58560F491C0E8110002CBAB8 /* ActionTypes.swift */; };
 		588F2EC51C0685ED00AA796D /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F2EC41C0685ED00AA796D /* TwitterClient.swift */; };
-		588F2EC71C07CD3200AA796D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F2EC61C07CD3200AA796D /* Constants.swift */; };
 		588F2ECA1C07E84500AA796D /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F2EC91C07E84500AA796D /* LandingViewController.swift */; };
 		588F2ECC1C07EB4E00AA796D /* Restful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F2ECB1C07EB4E00AA796D /* Restful.swift */; };
 		588F2ED01C09253E00AA796D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F2ECF1C09253E00AA796D /* Engine.swift */; };
@@ -31,8 +32,9 @@
 
 /* Begin PBXFileReference section */
 		3973E03C4B3243976D925FE6 /* Pods-twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter/Pods-twitter.release.xcconfig"; sourceTree = "<group>"; };
+		58560F471C0E80B8002CBAB8 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		58560F491C0E8110002CBAB8 /* ActionTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTypes.swift; sourceTree = "<group>"; };
 		588F2EC41C0685ED00AA796D /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
-		588F2EC61C07CD3200AA796D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		588F2EC91C07E84500AA796D /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		588F2ECB1C07EB4E00AA796D /* Restful.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restful.swift; sourceTree = "<group>"; };
 		588F2ECF1C09253E00AA796D /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
@@ -68,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58560F461C0E80A5002CBAB8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				58560F471C0E80B8002CBAB8 /* Colors.swift */,
+				58560F491C0E8110002CBAB8 /* ActionTypes.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		588F2EC81C07D11200AA796D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +143,7 @@
 		58C1366D1C05476E005D3BE8 /* twitter */ = {
 			isa = PBXGroup;
 			children = (
+				58560F461C0E80A5002CBAB8 /* Constants */,
 				588F2ED71C0ABFAD00AA796D /* Views */,
 				588F2ECE1C09201F00AA796D /* Storyboards */,
 				588F2ECD1C07EBE100AA796D /* States */,
@@ -140,7 +152,6 @@
 				58C136751C05476E005D3BE8 /* Assets.xcassets */,
 				58C1367A1C05476E005D3BE8 /* Info.plist */,
 				588F2EC41C0685ED00AA796D /* TwitterClient.swift */,
-				588F2EC61C07CD3200AA796D /* Constants.swift */,
 			);
 			path = twitter;
 			sourceTree = "<group>";
@@ -287,16 +298,17 @@
 				588F2EDD1C0B298A00AA796D /* User.swift in Sources */,
 				58C136711C05476E005D3BE8 /* LoginViewController.swift in Sources */,
 				588F2EC51C0685ED00AA796D /* TwitterClient.swift in Sources */,
+				58560F481C0E80B8002CBAB8 /* Colors.swift in Sources */,
 				588F2EDB1C0B20A500AA796D /* TweetComposeViewController.swift in Sources */,
 				58C1366F1C05476E005D3BE8 /* AppDelegate.swift in Sources */,
 				588F2EE31C0B643700AA796D /* TweetDetailViewController.swift in Sources */,
 				588F2ECA1C07E84500AA796D /* LandingViewController.swift in Sources */,
-				588F2EC71C07CD3200AA796D /* Constants.swift in Sources */,
 				588F2ED41C0ABD1F00AA796D /* TimelineViewController.swift in Sources */,
 				588F2ECC1C07EB4E00AA796D /* Restful.swift in Sources */,
 				588F2EDF1C0B62D100AA796D /* TweetDetailTableView.swift in Sources */,
 				588F2ED61C0ABF1500AA796D /* TweetTableView.swift in Sources */,
 				588F2EE11C0B636200AA796D /* TweetDetailViewCell.swift in Sources */,
+				58560F4A1C0E8110002CBAB8 /* ActionTypes.swift in Sources */,
 				588F2ED01C09253E00AA796D /* Engine.swift in Sources */,
 				588F2ED21C09B5C300AA796D /* Tweet.swift in Sources */,
 				588F2EE51C0BCE7400AA796D /* TweetTableViewCell.swift in Sources */,

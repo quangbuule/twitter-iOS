@@ -30,7 +30,7 @@ class TimelineViewController: UIViewController {
 
     activityIndicator.startAnimating()
     title = "Home"
-    Store.sharedInstance.dispatch(loadTweetsWithCollectionId: TweetState.homeCollectionId)
+    Store.sharedInstance.loadTweets(collectionId: TweetState.homeCollectionId)
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -76,7 +76,7 @@ class TimelineViewController: UIViewController {
   
   func refresh(sender: AnyObject) {
     refreshControl.beginRefreshing()
-    Store.sharedInstance.dispatch(loadTweetsWithCollectionId: TweetState.homeCollectionId)
+    Store.sharedInstance.loadTweets(collectionId: TweetState.homeCollectionId)
   }
 }
 
@@ -93,7 +93,7 @@ extension TimelineViewController: UITableViewDataSource, UITableViewDelegate, Tw
     tweetCell.tweet = tweets[indexPath.row]
     tweetCell.delegate = self
     if indexPath.row >= tweets.count - 10 {
-      Store.sharedInstance.dispatch(loadTweetsWithCollectionId: TweetState.homeCollectionId, more: true)
+      Store.sharedInstance.loadTweets(collectionId: TweetState.homeCollectionId, more: true)
     }
     
     return tweetCell
