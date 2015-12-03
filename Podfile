@@ -8,7 +8,7 @@ target 'twitter' do
 # Networking
 pod 'Alamofire', '~> 3.1.2'
 pod 'AlamofireImage', '~> 2.0'
-pod 'OAuthSwift', :git => 'git@github.com:quangbuule/OAuthSwift.git', :branch => 'master'
+pod 'OAuthSwift', :git => 'git@github.com:quangbuule/OAuthSwift.git', :commit => '69f892c31125f19dc1a6b24b264547a59220efdc'
 
 # ReactiveX
 pod 'RxSwift', '~> 2.0.0-beta'

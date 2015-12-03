@@ -15,7 +15,7 @@ DEPENDENCIES:
   - Alamofire (~> 3.1.2)
   - AlamofireImage (~> 2.0)
   - Dollar (~> 4.0.1)
-  - OAuthSwift (from `git@github.com:quangbuule/OAuthSwift.git`, branch `master`)
+  - OAuthSwift (from `git@github.com:quangbuule/OAuthSwift.git`, commit `69f892c31125f19dc1a6b24b264547a59220efdc`)
   - RxBlocking (~> 2.0.0-beta)
   - RxCocoa (~> 2.0.0-beta)
   - RxSwift (~> 2.0.0-beta)
@@ -23,14 +23,14 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   OAuthSwift:
-    :branch: master
+    :commit: 69f892c31125f19dc1a6b24b264547a59220efdc
     :git: git@github.com:quangbuule/OAuthSwift.git
   SwiftMoment:
     :git: git@github.com:akosma/SwiftMoment.git
 
 CHECKOUT OPTIONS:
   OAuthSwift:
-    :commit: 2d610319ee01399d683152b7103fcbe09be77705
+    :commit: 69f892c31125f19dc1a6b24b264547a59220efdc
     :git: git@github.com:quangbuule/OAuthSwift.git
   SwiftMoment:
     :commit: 19ab920430a1d5820bbda9a02912aa5d959cbcb7
